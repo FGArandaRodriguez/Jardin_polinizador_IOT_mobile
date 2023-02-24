@@ -5,5 +5,11 @@
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-item *ngIf="data">
+      {{ data.nombre }} - {{ data.temperatura }}
+    </ion-item>
+  </ion-list>
+  
 
 </ion-content>

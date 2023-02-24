@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RealtimeDatabaseService } from '../services/realtime-database.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  data: any;
+
+  constructor(private dataService: RealtimeDatabaseService) { }
 
   ngOnInit() {
+    this.dataService.getData().subscribe(data => {
+      this.data = data;
+      console.log(this.data)
+    });
   }
+
 
 }
