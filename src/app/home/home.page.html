@@ -8,6 +8,9 @@
   <ion-list>
     <ion-item *ngIf="data">
       {{ data.nombre }} - {{ data.temperatura }}
+      <ion-button size="large" routerLink="/graficas">
+        Ver graficas
+      </ion-button>
     </ion-item>
   </ion-list>
   
